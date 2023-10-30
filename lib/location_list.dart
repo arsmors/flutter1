@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:my_flutter_test/location_detail.dart';
 import 'models/location.dart';
 import 'package:my_flutter_test/models/styles.dart';
@@ -26,14 +25,14 @@ class LocationList extends StatelessWidget {
         leading: _itemThumbnail(location),
         title: _itemTitle(location),
         onTap: () =>
-            _navigationToLocationDetail(context, this.locations[index]));
+            _navigationToLocationDetail(context, index));
   }
 
-  void _navigationToLocationDetail(BuildContext context, Location location) {
+  void _navigationToLocationDetail(BuildContext context, int locationID) {
     Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => LocationDetail(location),
+          builder: (context) => LocationDetail(locationID),
         ));
   }
 
