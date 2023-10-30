@@ -4,9 +4,8 @@ import 'package:my_flutter_test/mocks/mock_location.dart';
 import 'location_detail.dart';
 import 'mocks/mock_location.dart';
 import 'models/location.dart';
+import 'app.dart';
 
 void main() {
-  final mockLocations = MockLocation.fetchAll();
-
-  return runApp(MaterialApp(home: LocationList(mockLocations)));
+  return runApp(App());
 }
